@@ -34,7 +34,9 @@ google api key AIzaSyCs6rT_VVjyfX5dBnxWY5XXKQyb8LBXkvE
 html {
   font-size: 16px;
 }
-
+a:hover {
+  text-decoration: none;
+}
 body {
   display: flex;
   flex-direction: column;
@@ -335,7 +337,7 @@ body {
 }
 #email.btn:hover{
   background: #800020;
-  color: #FF9867;
+  color: #FFFFFF;
   transition-timing-function: ease-in;
   transition-duration: 1s;
 }
@@ -439,51 +441,60 @@ body {
 }
 /* Services Summary */
 #servicesSummary {
-  display: flex;
-  flex-direction: column;
-  width: 75%;
+  display: block;
+  max-width: 52.5rem;
 }
-.grid-item a {
-  font-size: 1.75rem;
+#servicesSummary > h1 {
+  font-size: 2rem;
+  font-family: "Rufina", "Quattrocento", Georgia, serif;
+  font-weight: 700;
+  display: block;
+  color: #00165A;
+}
+button#moreDetails {
+  height: 2rem;
+  width: 14.725rem;
+  background-color: #FFFFFF;
+  background-repeat:no-repeat;
+  border: 2px solid #800020;
+  cursor:pointer;
+  overflow: hidden;
   display: flex;
-  text-decoration: none;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+  margin-left: 1.1rem;
+}
+button#moreDetails a{
+  font-size: 1.2rem;
+  color: #00165A;
+  font-family:"Oxygen", "Oswald", Helvetica, sans-serif;
+  font-weight: 700;
   margin: auto;
-  color: #800020;
 }
-
-
-.grid-item:nth-child(2n) {
-    color: #800020;
+button#moreDetails:hover a{
+color: #FFFFFF;
 }
-
-#TransparentItem {
-  border: Transparent;
-  background-color: Transparent;
+button#moreDetails:hover{
+  background: #00165A;
+  transition-timing-function: ease-in;
+  transition-duration: 0.75s;
 }
-
 .gridColumn {
-  height: 23rem;
-  width: 33.33%;
+  height: 100%;
+  width: 15.5rem;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 /* ---- grid ---- */
-
 .SSgrid {
   display: flex;
   flex-flow: row wrap;
   background: Transparent;
   justify-content: center;
   align-items: center;
-
+  height: 25rem;
   width: 100%;
   margin: 1rem auto;
-  padding: 0 0%;
 }
 /* clearfix */
 .grid:after {
@@ -491,9 +502,7 @@ body {
   display: block;
   clear: both;
 }
-
 /* ---- grid-item ---- */
-
 .grid-item {
   display: flex;
   justify-content: center;
@@ -512,21 +521,43 @@ body {
 .grid-item--height2 { height: 8rem; }
 .grid-item--height3 { height: 12rem; }
 
+.grid-item span {
+  font-size: 1.5rem;
+  display: flex;
+  text-decoration: none;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+  color: #800020;
+}
+
+@media only screen and (max-width: 992px){
+  .gridColumn {
+    width: 14rem;
+  }
+  .grid-item span {
+    font-size: 1.4rem;
+  }
+}
 /* grid item hover */
 .grid-item #moreDetails {
   display: none;
+  color: #FFFFFF;
 }
 .grid-item:hover #name {
-  color: Transparent;
-  z-index: -1;
+  display: none;
 }
-
 .grid-item:hover #moreDetails{
   display: flex;
-  z-index: 3;
-
 }
-
+.grid-item:hover{
+  background: #800020;
+  color: #FF9867;
+  transition-timing-function: ease-in;
+  transition-duration: 0.75s;
+}
 
 
 
